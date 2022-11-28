@@ -25,8 +25,8 @@
    $rulesEnglish = array(
 
 // CONSONANTS
-    array("’","","",""), // O’Neill
-    array("'","","",""), // O’Neill
+    array("ï¿½","","",""), // Oï¿½Neill
+    array("'","","",""), // Oï¿½Neill
     array("mc","^","","mak"), // McDonald
     array("tz","","","ts"), // Fitzgerald
     array("tch","","","tS"),
@@ -124,4 +124,4 @@
   );
 
   $rules[LanguageIndex("english", $languages)] = $rulesEnglish;
-?> 
+

@@ -68,7 +68,7 @@ $approxCommon = array(
     array("ae","","","(a|i)"),
     
     /// array ("s", "", "$", "(s|)"), // Attia(s)
-    /// array ("C", "", "", "s"),  // "c" could actually be "ç"
+    /// array ("C", "", "", "s"),  // "c" could actually be "ï¿½"
     
     array("n","","[bp]","m"),
      
@@ -155,4 +155,4 @@ $approxCommon = array(
    );
    $approxCommon = array_merge($exactApproxCommon, $approxCommon);
   
-?> 
+

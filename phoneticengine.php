@@ -670,4 +670,4 @@ return ($phonetic); // experimental !!!!
 
   }
 
-?> 
+

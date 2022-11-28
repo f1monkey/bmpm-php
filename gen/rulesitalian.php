@@ -50,10 +50,10 @@
     array("uo","","","(vo|o)"),
     array("u","","[aei]","v"), 
     
-    array("è","","","e"), 
-    array("é","","","e"), 
-    array("ò","","","o"),  
-    array("ó","","","o"), 
+    array("ï¿½","","","e"), 
+    array("ï¿½","","","e"), 
+    array("ï¿½","","","o"),  
+    array("ï¿½","","","o"), 
  
  // LATIN ALPHABET    
     array("a","","","a"),
@@ -87,4 +87,4 @@
   );
 
   $rules[LanguageIndex("italian", $languages)] = $rulesItalian;
-?> 
+

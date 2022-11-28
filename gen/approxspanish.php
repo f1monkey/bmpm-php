@@ -34,4 +34,4 @@
   $approxSpanish = array_merge($approxFrench, $approxSpanish);
   $approx[LanguageIndex("spanish", $languages)] = $approxSpanish;
   
-?> 
+

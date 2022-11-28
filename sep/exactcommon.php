@@ -26,7 +26,7 @@ include_once "exactapproxcommon.php";
 
 $exactCommon = array(
     array("h","","",""),
-  //array("C","","","k"),  // c that can actually be ç
+  //array("C","","","k"),  // c that can actually be ï¿½
  
  // VOICED - UNVOICED CONSONANTS
     array("s","[^t]","[bgZd]","z"),
@@ -44,4 +44,4 @@ $exactCommon = array(
 
 $exactCommon = array_merge($exactApproxCommon, $exactCommon);
 
-?> 
+
