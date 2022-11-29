@@ -8,15 +8,17 @@ if (isset($options['t']) && $options['t'] !== null) {
 }
 $_GET['type'] = $type;
 
-$files = glob($type . '/*.php');
+const DIR_PREFIX = "bmpm/";
 
-if (!file_exists($type)) {
+$files = glob(DIR_PREFIX . "$type/*.php");
+
+if (!file_exists(DIR_PREFIX . $type)) {
     die(sprintf('invalid type "%s"', $type));
 }
 
-require_once "phoneticutils.php";
+require_once "bmpm/phoneticutils.php";
 foreach ($files as $file) {
-    if ($file === "$type/languagenames1.php" || $file == "$type/languagenames2.php") {
+    if (($file === DIR_PREFIX ."$type/languagenames1.php") || ($file === DIR_PREFIX ."$type/languagenames2.php")) {
         continue;
     }
     require_once($file);
@@ -27,9 +29,9 @@ $data = array(
     'approxCommon' => $approxCommon,
     'exact' => $exact,
     'exactCommon' => $exactCommon,
-    'hebrewCommon'=> $hebrewCommon,
+    'hebrewCommon' => $hebrewCommon,
     'languageRules' => $languageRules,
     'rules' => $rules,
 );
 
-file_put_contents($type . '.json', json_encode($data));
+file_put_contents("$type.json", json_encode($data));
