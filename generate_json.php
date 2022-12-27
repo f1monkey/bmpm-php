@@ -63,18 +63,18 @@ $finalRules = [
 ];
 
 $approxResult = [];
-foreach ($approx as $langs => $ruleSet) {
+foreach ($approx as $langIndex => $ruleSet) {
     $approxResult[] = [
-        'langs' => $langs,
+        'lang' => $langIndex,
         'rules' => makeRulePatterns($ruleSet),
     ];
 }
 $finalRules['approx']['second'] = $approxResult;
 
 $exactResult = [];
-foreach ($exact as $langs => $ruleSet) {
+foreach ($exact as $langIndex => $ruleSet) {
     $exactResult[] = [
-        'langs' => $langs,
+        'lang' => $langIndex,
         'rules' => makeRulePatterns($ruleSet),
     ];
 }
