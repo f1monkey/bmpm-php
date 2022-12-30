@@ -96,12 +96,39 @@ foreach ($languageRules as  $rule) {
     ];
 }
 
+$discards = [];
+switch ($type) {
+    case 'ash': {
+        $discards = [
+            "ben", "bar", "ha"
+        ];
+        break;
+    }
+    case 'gen': {
+        $discards = [
+            "abe", "aben", "abi", "abou", "abu", "al", "bar", "ben", "bou", "bu",
+            "d", "da", "dal", "de", "del", "dela","della", "des", "di", "dos", "du",
+            "el", "la", "le", "ibn", "van", "von", "ha", "vanden", "vander"
+        ];
+        break;
+    }
+    case 'sep': {
+        $discards = [
+            "abe", "aben", "abi", "abou", "abu", "al", "bar", "ben", "bou", "bu",
+            "d", "da", "dal", "de","del", "dela","della", "des", "di",
+            "el", "la", "le", "ibn", "ha"
+        ];
+        break;
+    }
+}
+
 
 $data = array(
     'languages' => $languages,
     'rules' => $ruleResult,
     'finalRules' => $finalRules,
     'langRules' => $languageRulesResult,
+    'discards' => $discards,
 );
 
 file_put_contents("$type.json", json_encode($data));
